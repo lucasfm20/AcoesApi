@@ -22,7 +22,7 @@ for acoes in listaAcoes:
     
     if response.status_code == 200:
         data = response.json()
-        print(data)
+        print("Enviando dados....")
     else:
         print(f"Request failed with status code {response.status_code}")
     

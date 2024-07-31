@@ -12,21 +12,21 @@ def umItem(lista):
         else:
             if esc in listaDeAcoes:
                 lista.append(esc)
-                print (esc)
             else:
                 print("Não está na lista")
             
-    print (lista)
+   # print (lista)
     return lista
 
-def maisItem():
-    lista =[]
+def maisItem(lista_palavras):
+    
     esc =input("Digite alguma coisa:")
 
     lista_palavras = esc.split(',')
-    lista_palavras = [palavra.strip() for palavra in lista_palavras]
-    print(lista_palavras)
-
+    for palavra in lista_palavras:
+        lista.append(palavra)
+    #print(lista)
+    return lista
 
 def menu():
 
@@ -35,8 +35,8 @@ def menu():
         print()
         print("*"*15)
         print("MENU")
-        print("1-Cadastrar")
-        print("2-Selecionar")
+        print("1-Cadastrar 1 item por vez")
+        print("2-Cadastrar mais itens por vez")
         print("3-Sair")
         print()
         print("*"*15)
@@ -47,7 +47,7 @@ def menu():
             umItem(lista)
         
         elif escolha == 2:
-            print("Escolha selecionar")
+            maisItem(lista)
         
         elif escolha == 3:
             print("Sair")
@@ -55,4 +55,3 @@ def menu():
         else:
             print("Informe um número válido!!!")
 
-   
