@@ -7,7 +7,7 @@ import openpyxl
 menu.menu()
 
 
-listaAcoes = menu.lista
+listaAcoes = menu.listax
 listaDados = []
 for acoes in listaAcoes:
     
@@ -19,7 +19,7 @@ for acoes in listaAcoes:
         'token': 'h4cXJ8D2upKQgvSEYdFUqi'
     }
     
-    response = requests.get(url, params=params,verify=False)
+    response = requests.get(url, params=params)
     
     if response.status_code == 200:
         data = response.json()
