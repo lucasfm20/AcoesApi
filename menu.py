@@ -1,8 +1,11 @@
 import listaAcoes
+import time
+
 lista = []
+listaDeAcoes=listaAcoes.listaDasAcoes()
 def umItem(lista):
     
-    listaDeAcoes=listaAcoes.listaDasAcoes()
+    
     while True:
 
         esc =input("Digite alguma coisa:")
@@ -24,8 +27,13 @@ def maisItem(lista_palavras):
 
     lista_palavras = esc.split(',')
     for palavra in lista_palavras:
-        lista.append(palavra)
-    #print(lista)
+        if palavra in listaDeAcoes:
+            lista.append(palavra)
+        else:
+            print()
+            print(f"{palavra} não está na lista!!")
+            print()
+            time.sleep(1.0)
     return lista
 
 def menu():
