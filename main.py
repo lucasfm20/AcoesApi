@@ -2,6 +2,7 @@ import requests
 import json
 import pandas as pd
 import menu
+import openpyxl
 
 menu.menu()
 
@@ -18,7 +19,7 @@ for acoes in listaAcoes:
         'token': 'h4cXJ8D2upKQgvSEYdFUqi'
     }
     
-    response = requests.get(url, params=params)
+    response = requests.get(url, params=params,verify=False)
     
     if response.status_code == 200:
         data = response.json()
